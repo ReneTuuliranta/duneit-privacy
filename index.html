@@ -76,6 +76,8 @@
   <ul>
     <li><strong>When you last read each chat</strong>, to show the orange "unread" markers, and <strong>which chats you deleted for yourself</strong>.</li>
     <li><strong>Account status</strong>, for example whether an account is suspended after a report.</li>
+    <li><strong>Your phone's push address</strong> (a "push token"), if you allow notifications, so we can send you
+    notifications about new offers and messages. It is removed when you log out or delete your account.</li>
     <li><strong>Sign-in records</strong>: our login provider keeps a security log of sign-ins and active sessions,
     including the time, your device's IP address and the type of device or app used.</li>
     <li><strong>Technical data</strong> handled by our service providers when the app connects to them, such as your
@@ -107,12 +109,15 @@
   <div class="table"><table>
     <tr><th>Provider</th><th>What it does</th><th>Where</th></tr>
     <tr><td><strong>Supabase</strong></td><td>Stores the app's data (accounts, tasks, chats, reviews) and handles login</td><td>EU data centre in Paris, France</td></tr>
-    <tr><td><strong>Expo</strong> (650 Industries, Inc.)</td><td>Builds and delivers the app</td><td>USA</td></tr>
-    <tr><td><strong>Apple</strong> (TestFlight, Apple Maps) / <strong>Google</strong> (Google Maps on Android)</td><td>Distributes test versions; shows the map</td><td>Apple's and Google's own privacy policies apply</td></tr>
+    <tr><td><strong>Expo</strong> (650 Industries, Inc.)</td><td>Builds and delivers the app, and passes notifications on to Apple and Google</td><td>USA</td></tr>
+    <tr><td><strong>Apple</strong> (TestFlight, Apple Maps, Apple Push Notification service) / <strong>Google</strong> (Google Maps and Firebase Cloud Messaging on Android)</td><td>Distributes test versions; shows the map; delivers notifications to your phone</td><td>Apple's and Google's own privacy policies apply</td></tr>
     <tr><td><strong>Unsplash</strong></td><td>Provides the example photos shown on tasks. Your device loads them from Unsplash, which sees your IP address</td><td>Unsplash's privacy policy applies</td></tr>
   </table></div>
   <p>Where a provider is outside the EU/EEA, transfers rely on the EU's adequacy decisions (such as the EU–US Data
   Privacy Framework) or the EU Standard Contractual Clauses.</p>
+  <p><strong>Notifications</strong> contain the sender's first name, the task title and the start of the message, so this
+  text passes through Expo and Apple or Google on its way to your phone. You can turn notifications off in the app's
+  Settings or your phone's settings.</p>
   <p>We may disclose data to authorities if the law requires it, or to protect someone's safety.</p>
 
   <h2>5. How long we keep data</h2>
